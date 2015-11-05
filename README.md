@@ -15,10 +15,27 @@ When the client wants to sync with the server, is must pass the current clock va
 {
     "clock": 434,
     "users": [
-    	...
+        {
+            "name": "Honza Dvorsky",
+            "id": "1471255F-3F5E-47E3-93C1-5D4F536E63F5",
+            "avatarUrl": "http://honzadvorsky.com/pages/portfolio/images/hd1.jpg"
+            "scores": {
+                "651425FD-F3AD-47CB-A8BC-BE88340C515C": 14,
+                ...
+            }
+        },
+        ...
     ],
     "categories": [
-    	...
+        {
+            "name": "Dad Jokes",
+            "id": "651425FD-F3AD-47CB-A8BC-BE88340C515C"
+        },
+        {
+            "name": "Overslept",
+            "id": "50546704-1B1E-416B-900A-A81FFC2C42FE"
+        }
+        ...
     ]
 }
 ```
