@@ -10,7 +10,7 @@ When the client wants to sync with the server, is must pass the current clock va
 # API Docs
 
 # `GET /sync`
-*returns*: JSON of the current model
+*response body*: JSON of the current model
 ```
 {
     "clock": 434,
@@ -41,8 +41,8 @@ When the client wants to sync with the server, is must pass the current clock va
 ```
 
 # `POST /sync?clock=CLOCK`
-*body*: JSON of the updated model
-*returns*: 
+*request body*: JSON of the updated model
+*response body*: JSON with only the new clock value 
 ```
 {
     "newClock": 435
