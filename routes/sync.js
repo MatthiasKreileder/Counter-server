@@ -32,7 +32,9 @@ router.post('/', function(req, res, next) {
                 res.status(400).send("Sending clock " + clock + " but server is at clock " + trueClock);
                 return;
             }
-            handleUpdate(trueClock, state, function (err, newClock) {
+
+            var newState = req.body;
+            handleUpdate(trueClock, newState, function (err, newClock) {
                 if (err) {
                     res.status(500).send(err);
                 } else {
