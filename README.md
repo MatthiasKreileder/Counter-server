@@ -29,11 +29,13 @@ When the client wants to sync with the server, is must pass the current clock va
     "categories": [
         {
             "name": "Dad Jokes",
-            "id": "651425FD-F3AD-47CB-A8BC-BE88340C515C"
+            "id": "651425FD-F3AD-47CB-A8BC-BE88340C515C",
+            "iconUrl": "https://maxcdn.icons8.com/iOS7/PNG/100/Messaging/lol-100.png"
         },
         {
             "name": "Overslept",
-            "id": "50546704-1B1E-416B-900A-A81FFC2C42FE"
+            "id": "50546704-1B1E-416B-900A-A81FFC2C42FE",
+            "iconUrl": "https://maxcdn.icons8.com/iOS7/PNG/100/Household/sleeping_in_bed-100.png"
         }
         ...
     ]
