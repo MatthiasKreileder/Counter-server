@@ -51,6 +51,18 @@ When the client wants to sync with the server, is must pass the current clock va
 }
 ```
 
+## Errors
+All errors return with a HTTP status code 400. Each error is a JSON object with an application-specific error code and a human-readable description.
+
+- Code **1000** - Clock mismatch (e.g. "Sending clock 40 but server is at clock 45")
+```
+{
+  "code": 1000,
+  "description": "Sending clock 40 but server is at clock 45"
+}
+```
+Happens when the client is out of date, because other clients have already updated the model. In this case the recommendation is to discard the local model and use the `GET` method to get the current model again.
+
 # Author
 [honzadvorsky.com](http://honzadvorsky.com)
 

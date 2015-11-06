@@ -29,7 +29,9 @@ router.post('/', function(req, res, next) {
         } else {
             var trueClock = state["clock"];
             if (trueClock !== numClock) {
-                res.status(400).send("Sending clock " + clock + " but server is at clock " + trueClock);
+                var desc = "Sending clock " + clock + " but server is at clock " + trueClock;
+                var error = errorWithCodeAndDescription(1000, desc);
+                res.status(400).send(error);
                 return;
             }
 
@@ -44,6 +46,13 @@ router.post('/', function(req, res, next) {
         }
     });
 });
+
+function errorWithCodeAndDescription(code, description) {
+    return {
+        "code": code,
+        "description": description
+    };
+}
 
 //actually handle the update in the database and increment the clock
 function handleUpdate(clock, state, completion) {
